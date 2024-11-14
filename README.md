@@ -49,7 +49,7 @@ mvn clean package
 ## 2. Running the program without creating an .exe
 If you just want to run the program without generating an executable, use the following command:
 ```bash
-java --module-path "C:\Users\stani\code\javafx-sdk-17.0.12\lib" --add-modules javafx.controls,javafx.fxml -jar target/SmartCalc-1.0-SNAPSHOT.jar
+java --module-path "C:\path\to\your\javafx\lib" --add-modules javafx.controls,javafx.fxml -jar target/SmartCalc-1.0-SNAPSHOT.jar
 ```
 
 ## 3. Create a folder for the SmartCalc executable
@@ -61,7 +61,7 @@ jpackage --input target --name SmartCalc --main-jar SmartCalc-1.0-SNAPSHOT.jar -
 ## 4. Creating a custom runtime environment (if needed)
 If you encounter problems, you can create a custom runtime image first:
 ```bash
-jlink --module-path "C:\Program Files\Java\jdk-17.0.2\jmods;C:\Users\stani\code\javafx-sdk-17.0.12\lib" --add-modules javafx.controls,javafx.fxml --output target/runtime
+jlink --module-path "C:\path\to\your\jmods;C:\path\to\your\javafx\lib" --add-modules javafx.controls,javafx.fxml --output target/runtime
 ```
 
 ## 5. Re-run the `jpackage` command with the custom runtime environment

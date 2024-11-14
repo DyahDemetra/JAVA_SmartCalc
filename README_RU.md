@@ -49,7 +49,7 @@ mvn clean package
 ## 2. Запуск программы без создания .exe
 Если вам нужно просто запустить программу без создания исполняемого файла, используйте следующую команду:
 ```bash
-java --module-path "C:\Users\stani\code\javafx-sdk-17.0.12\lib" --add-modules javafx.controls,javafx.fxml -jar target/SmartCalc-1.0-SNAPSHOT.jar
+java --module-path "C:\path\to\your\javafx\lib" --add-modules javafx.controls,javafx.fxml -jar target/SmartCalc-1.0-SNAPSHOT.jar
 ```
 
 ## 3. Создать папку для SmartCalc.exe
@@ -61,7 +61,7 @@ jpackage --input target --name SmartCalc --main-jar SmartCalc-1.0-SNAPSHOT.jar -
 ## 4. Создание кастомного runtime-пространства (если нужно)
 Если возникают проблемы, вы можете сначала создать кастомное runtime-пространство с помощью следующей команды:
 ```bash
-jlink --module-path "C:\Program Files\Java\jdk-17.0.2\jmods;C:\Users\stani\code\javafx-sdk-17.0.12\lib" --add-modules javafx.controls,javafx.fxml --output target/runtime
+jlink --module-path "C:\path\to\your\jmods;C:\path\to\your\javafx\lib" --add-modules javafx.controls,javafx.fxml --output target/runtime
 ```
 
 ## 5. Повторный запуск команды `jpackage` с кастомным runtime-пространством
